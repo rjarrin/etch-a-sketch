@@ -77,6 +77,19 @@ function toggleEraserMode() {
     }
 }
 
+function saveGridAsPDF() {
+    const container = document.querySelector(".container");
+    console.log("here");
+    html2canvas(container, {
+        scale: 1
+    }).then(canvas => {
+        const imgData = canvas.toDataURL('image/png');
+        const pdf = new jsPDF();
+        pdf.addImage(imgData, 'PNG', 0, 0);
+        pdf.save("etch-a-sketch.pdf");
+    });
+}
+
 // Identify the grid's container element
 let container = document.querySelector(".container");
 
