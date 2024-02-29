@@ -55,11 +55,25 @@ function generateGrid(size) {
             square.style.width = `${squareSize}px`;
             square.style.height = `${squareSize}px`;
             square.addEventListener("mouseover", function() {
-                square.style.backgroundColor = getRandomColor();
+                if (eraserMode) {
+                    square.style.backgroundColor = "white";
+                } else {
+                    square.style.backgroundColor = getRandomColor();
+                }
             });
             row.append(square);
         }
         container.append(row);
+    }
+}
+
+function toggleEraserMode() {
+    eraserMode = !eraserMode;
+    const eraserButton = document.getElementById("Eraser");
+    if (eraserMode) {
+        eraserButton.classList.add("highlighted");
+    } else {
+        eraserButton.classList.remove("highlighted");
     }
 }
 
@@ -70,3 +84,5 @@ let container = document.querySelector(".container");
 let gridDim = 16;
 
 generateGrid(gridDim);
+
+let eraserMode = false;
