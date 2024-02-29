@@ -37,8 +37,10 @@ function createNewGrid() {
 // Generate validated grid
 function generateGrid(size) {
     const container = document.querySelector(".container");
-    const containerWidth = container.offsetWidth;
-    const containerHeight = container.offsetHeight;
+    //const containerWidth = container.offsetWidth;
+    //const containerHeight = container.offsetHeight;
+    const containerWidth = 560;
+    const containerHeight = 560;
     console.log(container.offsetHeight);
     console.log(container.offsetWidth);
 
@@ -68,6 +70,7 @@ function generateGrid(size) {
         container.append(row);
     }
 }
+
 
 function toggleEraserMode() {
     eraserMode = !eraserMode;

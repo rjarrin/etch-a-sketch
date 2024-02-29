@@ -15,7 +15,7 @@
   border-color: red;
   border-style: solid;
   border-radius: 20px;
-
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 body {
