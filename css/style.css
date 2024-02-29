@@ -7,6 +7,15 @@
   width: 560px;
   height: 560px;
   margin: 0 auto;
+  /* border: 40px solid rgba(255, 0, 0, 0.685); */
+  border-top: 40px;
+  border-bottom: 80px;
+  border-right: 40px;
+  border-left: 40px;
+  border-color: red;
+  border-style: solid;
+  border-radius: 20px;
+
 }
 
 body {

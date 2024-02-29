@@ -39,6 +39,8 @@ function generateGrid(size) {
     const container = document.querySelector(".container");
     const containerWidth = container.offsetWidth;
     const containerHeight = container.offsetHeight;
+    console.log(container.offsetHeight);
+    console.log(container.offsetWidth);
 
     // Calculate the size of each square
     const squareSize = Math.min(containerWidth / size, containerHeight / size);
