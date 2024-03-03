@@ -69,6 +69,31 @@ function generateGrid(size) {
         }
         container.append(row);
     }
+
+    addKnobs();
+}
+
+function addKnobs() {
+    const container = document.querySelector(".container");
+    // Prepare div wrapper below the grid
+    const gridWrapper = document.createElement("div");
+    gridWrapper.classList.add("grid-wrapper");
+    // Append knobs
+    const left = document.createElement("div");
+    left.classList.add("knob", "knob-right");
+    gridWrapper.append(left);
+    // Add toy name
+    const text = document.createElement("h2");
+    text.classList.add("name");
+    text.textContent = "Etch-A-Sketch";
+    gridWrapper.append(text);
+
+    const right = document.createElement("div");
+    right.classList.add("knob", "knob-left");
+    gridWrapper.append(right);
+    
+    // Append grid to container
+    container.append(gridWrapper);
 }
 
 
