@@ -1,13 +1,9 @@
 .container {
-  /* border: 1px solid black; */
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: center;
-  align-items: center; */
   width: 560px;
   height: 560px;
   margin: 0 auto;
-  /* border: 40px solid rgba(255, 0, 0, 0.685); */
   border-top: 40px;
   border-bottom: 80px;
   border-right: 40px;

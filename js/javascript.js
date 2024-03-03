@@ -37,8 +37,6 @@ function createNewGrid() {
 // Generate validated grid
 function generateGrid(size) {
     const container = document.querySelector(".container");
-    //const containerWidth = container.offsetWidth;
-    //const containerHeight = container.offsetHeight;
     const containerWidth = 560;
     const containerHeight = 560;
     console.log(container.offsetHeight);
@@ -69,16 +67,16 @@ function generateGrid(size) {
         }
         container.append(row);
     }
-
     addKnobs();
 }
 
+// Include knobs and toy text to border
 function addKnobs() {
     const container = document.querySelector(".container");
     // Prepare div wrapper below the grid
     const gridWrapper = document.createElement("div");
     gridWrapper.classList.add("grid-wrapper");
-    // Append knobs
+    // Append left knob
     const left = document.createElement("div");
     left.classList.add("knob", "knob-right");
     gridWrapper.append(left);
@@ -87,16 +85,15 @@ function addKnobs() {
     text.classList.add("name");
     text.textContent = "Etch-A-Sketch";
     gridWrapper.append(text);
-
+    // Append right knob
     const right = document.createElement("div");
     right.classList.add("knob", "knob-left");
     gridWrapper.append(right);
-    
     // Append grid to container
     container.append(gridWrapper);
 }
 
-
+// Toggle erase function for grid hovering
 function toggleEraserMode() {
     eraserMode = !eraserMode;
     const eraserButton = document.getElementById("Eraser");
@@ -107,6 +104,7 @@ function toggleEraserMode() {
     }
 }
 
+// Save grid image to PDF format
 function saveGridAsPDF() {
     const container = document.querySelector(".container");
     console.log("here");
@@ -122,10 +120,9 @@ function saveGridAsPDF() {
 
 // Identify the grid's container element
 let container = document.querySelector(".container");
-
 // Reference grid dimensions
 let gridDim = 16;
-
+// Generate default grid (16x16)
 generateGrid(gridDim);
-
+// Set erase mode to default settings
 let eraserMode = false;
